@@ -7,7 +7,7 @@
     "dev": "webpack serve --config webpack.development.config.js --hot",
     "build": "webpack --config webpack.production.config.js",
     "start": "node server.js",
-    "heroku-postbuild": "webpack -p",
+    "heroku-postbuild": "webpack --config webpack.production.config.js",
     "serve": "canned -p 5000 ./canned-server"
   },
   "author": "",
