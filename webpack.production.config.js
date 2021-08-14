@@ -33,7 +33,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "styles.[contenthash].css",
+      filename: "[name].styles.[contenthash].css",
     }),
     new HtmlWebpackPlugin({
       title: "Sabka Bazaar",

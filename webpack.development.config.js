@@ -33,7 +33,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "styles.css",
+      filename: "[name].styles.css",
     }),
     new HtmlWebpackPlugin({
       title: "Sabka Bazaar",
@@ -54,6 +54,7 @@ module.exports = {
           test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
           name: "vendor",
           chunks: "all",
+          minSize: 3000,
         },
       },
     },

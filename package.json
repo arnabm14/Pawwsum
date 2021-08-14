@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "canned -p 5000 ./server",
+    "start": "canned -p 5000 ./canned-server",
     "dev": "webpack serve --config webpack.development.config.js --hot",
     "build": "webpack --config webpack.production.config.js"
   },
