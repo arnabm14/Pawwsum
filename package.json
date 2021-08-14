@@ -4,10 +4,11 @@
   "description": "This is a shopping cart coding exercise",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "canned -p 5000 ./canned-server",
     "dev": "webpack serve --config webpack.development.config.js --hot",
-    "build": "webpack --config webpack.production.config.js"
+    "build": "webpack --config webpack.production.config.js",
+    "start": "node server.js",
+    "heroku-postbuild": "webpack -p",
+    "serve": "canned -p 5000 ./canned-server"
   },
   "author": "",
   "license": "MIT",
@@ -15,6 +16,7 @@
     "canned": "^0.3.12",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "copy-webpack-plugin": "^9.0.1",
+    "express": "^4.17.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
