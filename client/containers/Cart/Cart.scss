@@ -8,7 +8,7 @@ $light-gray:#c8cbce61;
         text-align: center;
         background: white;
         margin: 0;
-        padding: 1em;
+        padding: 0.5em;
     }
 
     .cart-filled {
@@ -41,14 +41,20 @@ $light-gray:#c8cbce61;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        p {
+            margin: 0;
+            padding: 0 10px;
+        }
     }
 
-    .buttons {
+    .checkout-button {
         height: 10%;
         padding: 0 1em;
 
         button {
             cursor: pointer;
+            font-size: inherit;
             background: $primary-color;
             padding: 10px 20px;
             border-radius: 4px;

@@ -40,7 +40,7 @@ const Cart = () => {
                 src="../static/images/lowest-price.png"
                 alt="Lowest price gauranteed"
               />{" "}
-              you wont find it cheaper anywhere!
+              <p>you wont find it cheaper anywhere!</p>
             </div>
           </section>
         </div>
@@ -52,7 +52,7 @@ const Cart = () => {
           </div>
         </div>
       )}
-      <div className="buttons">
+      <div className="checkout-button">
         {/* {items.length > 0 && <p>Promo code can be applied on payment page</p>} */}
         <button
           type="button"
@@ -60,9 +60,16 @@ const Cart = () => {
           onKeyPress={handleButtonClick}
           tabIndex={0}
         >
-          {items.length > 0
-            ? `Proceed to checkout Rs.${cart.cartPrice} >`
-            : "Start Shopping"}
+          {items.length > 0 && (
+            <>
+              <span>Proceed to checkout</span>
+              <span style={{ margin: "0px 10px 0px 40px" }}>
+                Rs.{cart.cartPrice}
+              </span>
+              {">"}
+            </>
+          )}
+          {items.length === 0 && "Start Shopping"}
         </button>
       </div>
     </div>

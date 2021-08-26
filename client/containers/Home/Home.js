@@ -32,6 +32,10 @@ const Home = () => {
       ) : (
         <>
           {banners && <Carousel data={banners} />}
+          <div className="disclaimer">
+            Note: This is a dummy site built by Anukritik, no products are
+            available for sale.
+          </div>
           <ul className="category-list">
             {categories.map((category) => (
               <li key={category.id} className="category">
