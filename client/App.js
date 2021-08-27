@@ -33,10 +33,10 @@ const App = () => {
           <main>
             <Suspense fallback={<small>Loading products...</small>}>
               <Switch>
-                <Route exact path="/" render={() => <Redirect to="/home" />} />
+                {/* <Route exact path="/" render={() => <Redirect to="/home" />} /> */}
+                <Route path="/" exact component={Home} />
                 <Route path="/login" component={SignIn} />
                 <Route path="/sign-up" component={Register} />
-                <Route path="/home" component={Home} />
                 <Route path="/products" component={Products} />
                 <Route path="/cart" component={Cart} />
               </Switch>

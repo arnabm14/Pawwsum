@@ -14,7 +14,7 @@ const Cart = () => {
   const handleButtonClick = () => {
     if (items.length > 0) {
       userAuthentication === "logged-in"
-        ? history.push("/home")
+        ? history.push("/")
         : history.push("/login");
     } else {
       history.push("/products");

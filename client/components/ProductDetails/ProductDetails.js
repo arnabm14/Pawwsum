@@ -8,8 +8,16 @@ const ProductDetails = ({ product }) => {
   const cartItems = useSelector((state) => state.cart.itemsAdded);
   const dispatch = useDispatch();
 
+  const isInCart = (prodId) => {
+    return cartItems.find((_) => _.id === prodId);
+  };
+  const itemQuantity = (prodId) => {
+    const item = cartItems.find((_) => _.id === prodId);
+    return item.quantity;
+  };
+
   const handleBuyNow = (prodId) => {
-    if (cartItems.find((_) => _.id === prodId)) {
+    if (isInCart(prodId)) {
       dispatch(increaseQuantity(prodId));
     } else {
       dispatch(
@@ -49,7 +57,17 @@ const ProductDetails = ({ product }) => {
           tabIndex={0}
           onKeyPress={() => handleBuyNow(product.id)}
         >
-          Buy Now <span className="buy-now-price"> @ Rs.{product.price}</span>
+          {isInCart(product.id) ? (
+            <>
+              <span>{itemQuantity(product.id)} in cart &nbsp;</span>
+              <span className="buy-now-price"> @ Rs.{product.price} each</span>
+            </>
+          ) : (
+            <>
+              <span>Add to cart &nbsp;</span>
+              <span className="buy-now-price"> @ Rs.{product.price}</span>
+            </>
+          )}
         </button>
       </div>
     </div>

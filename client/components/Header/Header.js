@@ -25,7 +25,7 @@ const Header = () => {
             alt="Sabka Bazaar Logo"
             height="60"
             width="100"
-            onClick={() => history.push("/home")}
+            onClick={() => history.push("/")}
           />
         </div>
         <div className="left-nav">
