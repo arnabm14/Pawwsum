@@ -1,0 +1,56 @@
+$primary-color:#d00156;
+$accent-color:#ea1d71;
+
+.category-details {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    .category-title {
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .category-description {
+        text-align: center;
+        padding: 5px 0 10px 0;
+    }
+
+    .category-explore-button {
+        padding: 10px;
+        background-color: $primary-color;
+        border-radius: 0px;
+        color: white;
+        border: none;
+        font-size: inherit;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            background: $accent-color;
+        }
+    }
+
+    button:disabled {
+        background: gray;
+    }
+
+    .category .category-explore-button a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.category-right {
+    display: flex;
+    align-items: center;
+    width: 35%;
+
+    .category-image {
+        width: 100%;
+        height: auto;
+    }
+}

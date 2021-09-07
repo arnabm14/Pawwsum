@@ -17,7 +17,6 @@ const Products = () => {
 
   useEffect(() => {
     dispatch(fetchProducts());
-    dispatch(fetchCategories());
   }, []);
 
   const handleCategoryChange = (category) => {
