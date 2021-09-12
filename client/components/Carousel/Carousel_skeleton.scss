@@ -1,0 +1,40 @@
+.carousel-skeleton-container {
+    width: 100%;
+    height: 25vh;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .button-skeleton {
+        width: 2rem;
+        height: 1.5rem;
+        display: flex;
+        align-items: center;
+        margin: 5px;
+    }
+
+    .image-skeleton {
+        width: 70%;
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4rem;
+        color: white;
+    }
+}
+
+//desktop view
+@media only screen and(min-width:1025px) {
+    .carousel-skeleton-container {
+        height: 40vh;
+        padding: 20px;
+
+        .image-skeleton {
+            height: 40vh;
+            width: 80%;
+            font-size: 7rem;
+        }
+    }
+}
