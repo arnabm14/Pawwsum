@@ -32,7 +32,7 @@ const Products = () => {
   return (
     <div className="products">
       {loading ? (
-        <div className="no-content">Loading...</div>
+        <div className="no-content">Loading products...</div>
       ) : error ? (
         <div className="no-content">Some error occured!</div>
       ) : (
