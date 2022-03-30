@@ -4,7 +4,7 @@ if (process.env.NODE_ENV === "development") {
 }
 
 if (process.env.NODE_ENV === "production") {
-  url = "https://pawwsum.herokuapp.com";
+  url = "https://pawwsum-api.herokuapp.com";
 }
 
 export const CATEGORIES_URL = `${url}/categories`;
