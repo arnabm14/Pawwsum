@@ -1,7 +1,7 @@
 {
-  "name": "code-exercise",
+  "name": "Pawwsum",
   "version": "1.0.0",
-  "description": "This is a shopping cart coding exercise",
+  "description": "A pet store for one stop solution for everything pet related",
   "main": "index.js",
   "scripts": {
     "dev": "webpack serve --config webpack.development.config.js --hot",
