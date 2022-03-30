@@ -7,6 +7,8 @@ const Register = () => {
   const intialState = {
     firstName: "",
     lastName: "",
+    petName: "",
+    petType: "",
     email: "",
     password: "",
     confirmPwd: "",
@@ -29,6 +31,8 @@ const Register = () => {
               "name",
               userDetails.firstName + " " + userDetails.lastName
             );
+            sessionStorage.setItem("petname", userDetails.petName);
+            sessionStorage.setItem("pettype", userDetails.petType);
             sessionStorage.setItem("email", userDetails.email);
             sessionStorage.setItem("password", userDetails.password);
             sessionStorage.setItem("status", "");
@@ -67,6 +71,8 @@ const Register = () => {
       <aside>
         <h1>Signup</h1>
         <p>We do not share your personal details with anyone</p>
+        <p>( Because we are a startup and we do not have anyone to share details with ;-; )</p>
+        <p>Feel free to share and help us grow, we swear we still would'not share your details with anyone </p>
       </aside>
       <section className="register-form">
         <form onSubmit={onFormSubmit}>
@@ -83,6 +89,20 @@ const Register = () => {
             value={userDetails.lastName}
             onChange={(event) =>
               setUserDetails({ ...userDetails, lastName: event.target.value })
+            }
+          />
+          <input
+            placeholder="Pet Name(s)"
+            value={userDetails.pet}
+            onChange={(event) =>
+              setUserDetails({ ...userDetails, petName: event.target.value })
+            }
+          />
+          <input
+            placeholder="Pet Type (Cat/Dog)"
+            value={userDetails.pet}
+            onChange={(event) =>
+              setUserDetails({ ...userDetails, petType: event.target.value })
             }
           />
           <input
