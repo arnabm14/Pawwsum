@@ -35,7 +35,7 @@ const Home = () => {
         <>
           {banners && <Carousel data={banners} />}
           <div className="disclaimer">
-            Note: This is a dummy site built by Anukritik, no products are
+            Note: This is a dummy site built for learning purposes, no products are
             available for sale.
           </div>
           <ul className="category-list">
