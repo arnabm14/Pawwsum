@@ -22,7 +22,7 @@ const Header = () => {
           <img
             className="brand-logo"
             src="../static/images/logo.png"
-            alt="Sabka Bazaar Logo"
+            alt="Pawwsum Logo"
             height="60"
             width="100"
             onClick={() => history.push("/")}

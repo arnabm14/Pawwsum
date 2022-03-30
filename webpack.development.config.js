@@ -36,7 +36,7 @@ module.exports = {
       filename: "[name].styles.css",
     }),
     new HtmlWebpackPlugin({
-      title: "Sabka Bazaar",
+      title: "PAwwsum",
       template: path.resolve(__dirname, "./public/index.html"),
     }),
     new CopyPlugin({
