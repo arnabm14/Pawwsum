@@ -61,9 +61,16 @@ const SignIn = () => {
           </p>
           <button>SignIn</button>
         </form>
+        <form action="/sign-up" class="inline">
+          <button class="float-left submit-button" >Register</button>
+        </form>
       </section>
+      
     </div>
+
   );
 };
+
+
 
 export default SignIn;
