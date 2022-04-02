@@ -9,6 +9,7 @@ import Register from "./containers/Auth/Register";
 import SignIn from "./containers/Auth/SignIn";
 import AuthContext from "./AuthContext";
 import store from "./redux/store";
+import Recommendations from "./containers/Recommendations/Recommendations";
 const Products = lazy(() => import("./containers/Products/Products"));
 const Cart = lazy(() => import("./containers/Cart/Cart"));
 
@@ -38,6 +39,7 @@ const App = () => {
                 <Route path="/login" component={SignIn} />
                 <Route path="/sign-up" component={Register} />
                 <Route path="/products" component={Products} />
+                <Route path="/recommendations" component={Recommendations} />
                 <Route path="/cart" component={Cart} />
               </Switch>
             </Suspense>
