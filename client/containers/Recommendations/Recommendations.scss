@@ -1,0 +1,39 @@
+$light-gray:#c8cbce61;
+$gray:#a1a4ab;
+$primary-color:#d00156;
+
+//desktop screen
+@media only screen and (min-width: 1025px) {
+    .recommendations {
+        padding: 0 6rem;
+    }
+}
+
+.recommendations {
+    display: flex;
+
+    .no-content {
+        height: 80vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media only screen and (min-width: 1025px) {
+        .no-content {
+            font-size: 2rem;
+        }
+    }
+
+    .recommendation-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .recommendations {
+        display: block;
+    }
+}

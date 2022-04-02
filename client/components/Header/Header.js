@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
 import "./Header.scss";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import AuthContext from "../../AuthContext";
 
 const Header = () => {
   const history = useHistory();
+  const location = useLocation();
   const { userAuthentication, toggleUserAuthentication } = useContext(
     AuthContext
   );
@@ -30,12 +31,21 @@ const Header = () => {
         </div>
         <div className="left-nav">
           <ul className="tabs">
-            <li>
+            <li className={location.pathname === "/" ? "active" : ""}>
               <Link to="/">Home</Link>
             </li>
-            <li>
+            <li className={location.pathname === "/products" ? "active" : ""}>
               <Link to="/products">Products</Link>
             </li>
+            {userAuthentication === "logged-in" && (
+              <li
+                className={
+                  location.pathname === "/recommendations" ? "active" : ""
+                }
+              >
+                <Link to="/recommendations">Recommendation</Link>
+              </li>
+            )}
           </ul>
         </div>
         <div className="right-nav">
