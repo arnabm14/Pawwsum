@@ -2,7 +2,7 @@ let url;
 const petType = sessionStorage.getItem("pettype");
 
 if (process.env.NODE_ENV === "development") {
-  url = "http://pawwsumflask.herokuapp.com";
+  url = "http://localhost:5000";
 }
 
 if (process.env.NODE_ENV === "production") {
