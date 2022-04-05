@@ -42,7 +42,7 @@ const Register = () => {
               statusErrorMessage: "",
             });
             setUserDetails(intialState);
-            setTimeout(() => history.push("/login"), 2000);
+            setTimeout(() => history.push("/login"), 5000);
           } else {
             showError("Invalid email id");
           }
