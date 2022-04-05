@@ -26,9 +26,12 @@ export const fetchRecommendationFailure = (error) => {
 };
 
 export const fetchRecommendation = () => {
+  const petType = sessionStorage.getItem("pettype");
+  const recommendationUrl = `${RECOMMEND_URL}/${petType}`;
+
   return (dispatch) => {
     dispatch(fetchRecommendationRequest());
-    fetch(RECOMMEND_URL)
+    fetch(recommendationUrl)
       .then((res_) => res_.json())
       .then((data) => {
         dispatch(fetchRecommendationSuccess(data));
