@@ -81,7 +81,7 @@ const Register = () => {
           with ;-; )
         </p>
         <p>
-          Feel free to share and help us grow, we swear we still would'not share
+          Feel free to share and help us grow, we swear we still would'nt share
           your details with anyone{" "}
         </p>
       </aside>
