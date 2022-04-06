@@ -23,7 +23,12 @@ const Register = () => {
     e.preventDefault();
     const emailReg = /\S+@\S+\.\S+/;
     const pwdReg = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
-    if (userDetails.firstName && userDetails.email && userDetails.password) {
+    if (
+      userDetails.firstName &&
+      userDetails.email &&
+      userDetails.password &&
+      userDetails.petType
+    ) {
       if (userDetails.password === userDetails.confirmPwd) {
         if (pwdReg.test(userDetails.password)) {
           if (emailReg.test(userDetails.email)) {
@@ -55,7 +60,7 @@ const Register = () => {
         showError("Passwords do not match");
       }
     } else {
-      showError("Please provide First name, Email & Password");
+      showError("Please provide First name, Email, Pet Type & Password");
     }
   };
 
@@ -71,13 +76,19 @@ const Register = () => {
       <aside>
         <h1>Signup</h1>
         <p>We do not share your personal details with anyone</p>
-        <p>( Because we are a startup and we do not have anyone to share details with ;-; )</p>
-        <p>Feel free to share and help us grow, we swear we still would'not share your details with anyone </p>
+        <p>
+          ( Because we are a startup and we do not have anyone to share details
+          with ;-; )
+        </p>
+        <p>
+          Feel free to share and help us grow, we swear we still would'not share
+          your details with anyone{" "}
+        </p>
       </aside>
       <section className="register-form">
         <form onSubmit={onFormSubmit}>
           <input
-            placeholder="First name"
+            placeholder="First name *"
             required
             value={userDetails.firstName}
             onChange={(event) =>
@@ -99,14 +110,15 @@ const Register = () => {
             }
           />
           <input
-            placeholder="Pet Type (Cat/Dog)"
+            placeholder="Pet Type (Cat/Dog) *"
+            required
             value={userDetails.pet}
             onChange={(event) =>
               setUserDetails({ ...userDetails, petType: event.target.value })
             }
           />
           <input
-            placeholder="Email"
+            placeholder="Email *"
             required
             value={userDetails.email}
             onChange={(event) =>
@@ -114,7 +126,7 @@ const Register = () => {
             }
           />
           <input
-            placeholder="Password"
+            placeholder="Password *"
             type="password"
             required
             value={userDetails.password}
@@ -123,7 +135,7 @@ const Register = () => {
             }
           />
           <input
-            placeholder="Confirm Password"
+            placeholder="Confirm Password *"
             type="password"
             required
             value={userDetails.confirmPwd}
