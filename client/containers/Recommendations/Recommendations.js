@@ -19,7 +19,7 @@ const Recommendations = () => {
       {loading ? (
         <div className="no-content">Loading your recommendations...</div>
       ) : error ? (
-        <div className="no-content">Some error occurred!</div>
+        <div className="no-content">Apologies but We do not service your Pet right now. Stay tuned for more info</div>
       ) : (
         <div className="recommendation-list">
           {recommendations &&
